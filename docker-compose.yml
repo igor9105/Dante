@@ -1,0 +1,9 @@
+#docker-compose up -d
+#docker-compose down
+services:
+  nodejs:
+    build: .
+    command: npm run dev
+    restart: unless-stopped
+    ports:
+      - "0.0.0.0:8181:8080"
